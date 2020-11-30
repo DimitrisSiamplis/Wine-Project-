@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <p>If you have an acount please continue to <a href="file:///C:/Users/Dimitris%20Siamplis/Desktop/mysql-test/login.html">Login Page</a></p>
+        
+
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <br>
+        <br>
+        
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <br>
+        <br>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <br>
+        <br>
+        
+
+        <p>Select the User kind.</p>
+
+        <label for="kind">Choose kind:</label>
+            <select name="kind" id="kind">
+                <option value="user">user</option>
+                <option value="winemaker">winemaker</option>
+                
+            </select>
+
+
+        <button type="submit" onclick="register()">Register</button>
+
+    
+
+        <script>
+            function register()
+            {
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("psw").value;
+                var passwordrepeat = document.getElementById("psw-repeat").value;
+                var UserKind = document.getElementById("kind").value;
+
+                
+                if( (password === passwordrepeat) && (UserKind === "user" || UserKind === "winemaker" ) )
+                {
+                    console.log("Register have been Succefully");
+                    location.replace("file:///C:/Users/Dimitris%20Siamplis/Desktop/mysql-test/login.html");
+                }
+                else
+                {
+                    alert("Try again");
+                    location.replace("file:///C:/Users/Dimitris%20Siamplis/Desktop/mysql-test/Register.html");
+
+                }
+                
+            }
+
+
+        </script>
+
+
+
+    </body>
+</html>
