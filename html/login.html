@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        
+        <h1>Welcome to WineLovers Page </h1>
+        <br>
+        <h3>Please log in to continue</h3>
+        <hr>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required><br><br>
+
+        <label for="password"><b>password</b></label>
+        <input type="password" placeholder="Enter password" name="password" id="password" required><br><br>
+
+        <button onclick="login()">Login</button>
+
+
+        <script>
+            function login()
+            {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var n = username.length;
+                var p = password.length;
+                
+                if(n>0 && p>0)
+                {
+                    console.log("log in succesfully");
+                }
+                else
+                {
+                    alert("Try again!");
+                    location.replace("file:///C:/Users/Dimitris%20Siamplis/Desktop/mysql-test/login.html");
+                }
+    
+                
+            }
+        </script>
+
+
+
+    </body>
+</html>
